@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #9095f6, #8d92f3, #8a8ff1, #878cee, #8489ec, #8085eb, #7d82ea, #797ee9, #7479e9, #6e74e8, #696ee8, #6369e7);
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-image: linear-gradient(to right bottom, #5c5b5b, #595858, #565555, #545353, #515050, #4f4e4e, #4d4c4c, #4b4a4a, #494848, #464646, #444444, #424242);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 14px 10px 30px rgba(0, 0, 0, 0.3);
+}
+    
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+
+    .user, .pwd, button {
+
+        border: none;
+        border-radius: 5px;
+        padding: 14px;
+        color: whitesmoke;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .user, .pwd {
+        background-color: #3b3b3b;
+    
+    }
+
+    button {
+        background-color: rgb(113, 163, 93);
+        cursor: pointer;
+        box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+            background-color: rgb(96, 156, 72);
+        }
+    }
+    
+    h1.title {
+        color: #acabab;
+        font-size: 30px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .register-link, .forgot-password-link {
+        color: whitesmoke;
+        text-align: center;
+        font-size: 14px;
+
+        a {
+            color: rgb(120, 150, 233);
+        }
+
+        a:hover {
+            color: rgb(71, 112, 224);
+        }
+    }
+}
