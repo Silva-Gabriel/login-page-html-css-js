@@ -58,14 +58,43 @@ async function LogIn(event) {
       });
 
       if (!matchedUser) {
-        let popup = CreateElement('div', 'popup-error', 'Usuário ou senha incorretos!');
+        let popup = CreateElement(
+          "div",
+          "popup-error",
+          "Usuário ou senha incorretos!"
+        );
         RemovePopUpOfConsole(popup);
-      } else {
-        let popup = CreateElement('div', 'popup-sucess', 'Login realizado com sucesso!');
-        RemovePopUpOfConsole(popup);
-        await Sleep(1800);
-        window.location.href = "home-club.html";
+        return; // Sai da função se o usuário não for encontrado
       }
+
+      // Se o usuário for encontrado, exibe a mensagem de sucesso
+      let popup = CreateElement(
+        "div",
+        "popup-sucess",
+        "Login realizado com sucesso!"
+      );
+      RemovePopUpOfConsole(popup);
+
+      // Exibe a barra de carregamento
+      let loaderContainer = document.querySelector(".loader-container");
+      loaderContainer.style.display = "inline";
+
+      // Inicia a barra de carregamento
+      let progressElement = document.querySelector(".progress-bar");
+      let percentageElement = document.getElementById("percentage");
+      let width = 0;
+
+      let interval = setInterval(() => {
+        if (width < 100) {
+          width++;
+          progressElement.style.width = width + "%";
+          percentageElement.innerText = width + "%";
+        } else {
+          clearInterval(interval);
+          // Redireciona para a página home após o carregamento
+          window.location.href = "home-club.html";
+        }
+      }, 40);
     })
     .catch((error) => console.error("Erro ao carregar os usuários:", error));
 }
@@ -161,7 +190,6 @@ function RemovePopUpOfConsole(popup)
         }
     });
 }
-
 
 document.addEventListener('copy', (event) => {
     const selection = window.getSelection();
