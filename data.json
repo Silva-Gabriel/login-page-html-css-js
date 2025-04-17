@@ -1,0 +1,31 @@
+{
+    "users": {
+        "admin": {
+            "password": "admin",
+            "permissions": ["read", "write"],
+            "userData": {
+                "name": "admin",
+                "cpf": "780.146.720-54",
+                "email": "admin@enterprise.net"
+            }
+        },
+        "user": {
+            "password": "user",
+            "permissions": ["read"],
+            "userData": {
+                "name": "user",
+                "cpf": "12345678901",
+                "email": "user@gmail.com"
+            }
+        },
+        "guest": {
+            "password": "guest",
+            "permissions": ["read"],
+            "userData": {
+                "name": "guest",
+                "cpf": "12345678901",
+                "email": "guest@gmail.com"
+            }
+        }
+    }
+}

@@ -32,7 +32,30 @@ form {
     width: 100%;
     gap: 16px;
 
-    .user, .pwd, button {
+    .divider-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        .or {
+            color:#5c5c5c;
+            font-size: 14px;
+        }
+
+        .divider {
+            width: 100%;
+        
+            hr {
+                width: 100%;
+                height: 2px;
+                background-color: #696868;
+                border: none;
+            }
+        }
+    }
+
+    .user, .pwd, .name, .surname, .cpf, .phone, .email, .birthday, .confirm-pwd, button {
 
         border: none;
         border-radius: 5px;
@@ -42,39 +65,112 @@ form {
         transition: background-color 0.3s ease;
     }
 
-    .user, .pwd {
+    .user, .pwd, .name, .surname, .cpf, .phone, .email, .birthday, .confirm-pwd {
         background-color: #3b3b3b;
-    
     }
 
-    button {
-        background-color: rgb(113, 163, 93);
+    .forgot-password-link {
+        color: #636363;
+        font-size: 14px;
+        transition: color 0.3s ease;
+        text-align: right;
+
+        a {
+            color: #7b8edc;
+
+            &:hover {
+                color: #627be2;
+            }
+        }
+    }
+
+    .enter-button, .register-button {
         cursor: pointer;
         box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.3);
+    }
 
+    .enter-button {
+        background-color: rgb(113, 163, 93);
+        text-decoration: none;
+        text-align: center;
+        
         &:hover {
             background-color: rgb(96, 156, 72);
         }
     }
-    
+
+    .register-button {
+        background-color: rgb(109, 117, 204);
+        text-decoration: none;
+        text-align: center;
+        
+        &:hover {
+            background-color: rgb(88, 98, 208);
+        }
+    }
+
     h1.title {
         color: #acabab;
         font-size: 30px;
         margin-bottom: 20px;
         text-align: center;
+        text-shadow: 1px 2px 2px whitesmoke;
     }
+}
 
-    .register-link, .forgot-password-link {
-        color: whitesmoke;
-        text-align: center;
-        font-size: 14px;
+.popup-error, .popup-sucess {
+    position: fixed; /* Fixa o popup na tela */
+    top: -100px; /* Começa fora da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para o centro */
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    font-size: 16px;
+    text-align: center;
+}
 
-        a {
-            color: rgb(120, 150, 233);
-        }
+.popup-error {
+    background-color: #ff4d4d;
+    animation: slideDownFadeIn 0.5s ease-out forwards, fadeOut 0.5s ease-in 5s forwards;
+}
+.popup-sucess {
+    animation: slideDownFadeIn 0.5s ease-out forwards, fadeOut 0.5s ease-in 3s forwards;
+    background-color: #4dff4d;
+}
 
-        a:hover {
-            color: rgb(71, 112, 224);
-        }
+input:focus {
+    outline: none;
+}
+
+input.valid {
+    border: 2px solid green;
+}
+
+input.invalid {
+    border: 2px solid red;
+}
+
+/* Animação de entrada: deslizamento para baixo e fade-in */
+@keyframes slideDownFadeIn {
+    0% {
+        top: -100px; /* Fora da tela */
+        opacity: 0; /* Invisível */
+    }
+    100% {
+        top: 20px; /* Posição final */
+        opacity: 1; /* Visível */
+    }
+}
+
+/* Animação de saída: fade-out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1; /* Visível */
+    }
+    100% {
+        opacity: 0; /* Invisível */
     }
 }
