@@ -161,3 +161,32 @@ function RemovePopUpOfConsole(popup)
         }
     });
 }
+
+
+document.addEventListener('copy', (event) => {
+    const selection = window.getSelection();
+    const selectedText = selection.toString();
+
+    // Cria um elemento temporário para copiar o conteúdo com estilo
+    const tempElement = document.createElement('div');
+    tempElement.style.backgroundColor = 'transparent'; // Define o fundo como transparente
+    tempElement.style.color = 'inherit'; // Mantém a cor do texto
+    tempElement.textContent = selectedText;
+
+    document.body.appendChild(tempElement);
+
+    // Seleciona o conteúdo do elemento temporário
+    const range = document.createRange();
+    range.selectNodeContents(tempElement);
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    // Executa o comando de cópia
+    document.execCommand('copy');
+
+    // Remove o elemento temporário
+    document.body.removeChild(tempElement);
+
+    // Impede o comportamento padrão
+    event.preventDefault();
+});
