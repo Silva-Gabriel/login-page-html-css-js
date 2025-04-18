@@ -200,7 +200,7 @@ input.valid {
 }
 
 input.invalid {
-    border: 2px solid red;
+    border: 2px solid rgb(240, 85, 85);
 }
 
 /* Animação de entrada: deslizamento para baixo e fade-in */
