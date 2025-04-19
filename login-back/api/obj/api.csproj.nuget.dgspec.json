@@ -1,0 +1,428 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\api\\api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\api\\api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\api\\api.csproj",
+        "projectName": "api",
+        "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\api\\api.csproj",
+        "packagesPath": "C:\\Users\\potte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\potte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\application.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\application.csproj"
+              },
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\crosscutting\\crosscutting.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\crosscutting\\crosscutting.csproj"
+              },
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.12, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\application.csproj",
+        "projectName": "application",
+        "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\application.csproj",
+        "packagesPath": "C:\\Users\\potte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\potte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj"
+              },
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\infra.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\infra.csproj"
+              },
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\services.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\crosscutting\\crosscutting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\crosscutting\\crosscutting.csproj",
+        "projectName": "crosscutting",
+        "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\crosscutting\\crosscutting.csproj",
+        "packagesPath": "C:\\Users\\potte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\crosscutting\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\potte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\application.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\application\\application.csproj"
+              },
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj"
+              },
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\infra.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\infra.csproj"
+              },
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\services.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Mediatr": {
+              "target": "Package",
+              "version": "[12.5.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj",
+        "projectName": "domain",
+        "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj",
+        "packagesPath": "C:\\Users\\potte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\potte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\infra.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\infra.csproj",
+        "projectName": "infra",
+        "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\infra.csproj",
+        "packagesPath": "C:\\Users\\potte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\infra\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\potte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\services.csproj",
+        "projectName": "services",
+        "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\services.csproj",
+        "packagesPath": "C:\\Users\\potte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\potte\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj": {
+                "projectPath": "C:\\Users\\potte\\OneDrive\\Área de Trabalho\\Code\\HTML.CSS.JS\\login\\login-back\\domain\\domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.405/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

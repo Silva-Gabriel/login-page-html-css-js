@@ -1,0 +1,16 @@
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\bin\Debug\net8.0\infra.deps.json
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\bin\Debug\net8.0\infra.dll
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\bin\Debug\net8.0\infra.pdb
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.AssemblyInfoInputs.cache
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.AssemblyInfo.cs
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.csproj.CoreCompileInputs.cache
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.sourcelink.json
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.dll
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\refint\infra.dll
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.pdb
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\ref\infra.dll
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\bin\Debug\net8.0\domain.dll
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\bin\Debug\net8.0\domain.pdb
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.csproj.AssemblyReference.cache
+C:\Users\potte\OneDrive\Área de Trabalho\Code\HTML.CSS.JS\login\login-back\infra\obj\Debug\net8.0\infra.csproj.Up2Date
