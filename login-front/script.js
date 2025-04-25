@@ -1,67 +1,67 @@
 function validateName(event) {
-    const name = event.target.value;
-    const element = event.target;
-    const nameRegex = /^[a-zA-ZÀ-ÿ\s]+$/; // Validar nomes com letras e espaços
-    const hasMultipleWords = name.trim().split(/\s+/).length > 1;
+  const name = event.target.value;
+  const element = event.target;
+  const nameRegex = /^[a-zA-ZÀ-ÿ\s]+$/; // Validar nomes com letras e espaços
+  const hasMultipleWords = name.trim().split(/\s+/).length > 1;
 
-    validateElement(name, nameRegex.test(name) && hasMultipleWords, element);
+  validateElement(name, nameRegex.test(name) && hasMultipleWords, element);
 }
 
 function validateCPF(event) {
-    const cpf = event.target.value;
-    const element = event.target;
-    const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+  const cpf = event.target.value;
+  const element = event.target;
+  const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
 
-    validateElement(cpf, cpfRegex.test(cpf), element);
+  validateElement(cpf, cpfRegex.test(cpf), element);
 }
 
 function validateEmail(event) {
-    const email = event.target.value;
-    const element = event.target;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  const email = event.target.value;
+  const element = event.target;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    validateElement(email, emailRegex.test(email), element);
+  validateElement(email, emailRegex.test(email), element);
 }
 
 function validateUser(event) {
-    const user = event.target.value;
-    const element = event.target;
-    const userRegex = /^[a-zA-Z][a-zA-Z0-9]*$/;
+  const user = event.target.value;
+  const element = event.target;
+  const userRegex = /^[a-zA-Z][a-zA-Z0-9]*$/;
 
-    validateElement(user, userRegex.test(user), element);
+  validateElement(user, userRegex.test(user), element);
 }
 
 function validateElement(value, expression, element) {
-    if (!value) {
-        clearValidationStyles(element);
-        return;
-    }
+  if (!value) {
+    clearValidationStyles(element);
+    return;
+  }
 
-    if (expression) {
-        resetElementStyle(element);
-    } else {
-        applyErrorStyle(element);
-    }
+  if (expression) {
+    resetElementStyle(element);
+  } else {
+    applyErrorStyle(element);
+  }
 }
 
 function resetElementStyle(element) {
-    element.classList.remove('invalid');
-    element.classList.add('valid');
+  element.classList.remove("invalid");
+  element.classList.add("valid");
 }
 
 function applyErrorStyle(element) {
-    element.classList.remove('valid');
-    element.classList.add('invalid');
+  element.classList.remove("valid");
+  element.classList.add("invalid");
 }
 
 function clearValidationStyles(element) {
-    element.classList.remove('valid', 'invalid');
+  element.classList.remove("valid", "invalid");
 }
 
-document.getElementById('cpf').addEventListener('input', validateCPF);
-document.getElementById('name').addEventListener('input', validateName);
-document.getElementById('email').addEventListener('input', validateEmail);
-document.getElementById('user').addEventListener('input', validateUser);
+document.getElementById("cpf").addEventListener("input", validateCPF);
+document.getElementById("name").addEventListener("input", validateName);
+document.getElementById("email").addEventListener("input", validateEmail);
+document.getElementById("user").addEventListener("input", validateUser);
 
 async function LogIn(event) {
   event.preventDefault();
@@ -151,7 +151,8 @@ async function SignUp(event) {
 
   // validations
   const nameRegex = /^[a-zA-ZÀ-ÿ\s]+$/;
-  const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).+$/;
+  const passwordRegex =
+    /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
   const userRegex = /^[a-zA-Z][a-zA-Z0-9]*$/;
@@ -164,45 +165,70 @@ async function SignUp(event) {
     passwordValue,
     passwordConfirmValue,
   ];
-  let emptyFields = requiredFields.filter((field) => field == '');
+  let emptyFields = requiredFields.filter((field) => field == "");
 
   if (emptyFields.length > 0) {
-    let popup = CreateElement('div', 'popup-error', '❌ Existem campos vazios!<br>Preencha todos os campos.');
+    let popup = CreateElement(
+      "div",
+      "popup-error",
+      "❌ Existem campos vazios!<br>Preencha todos os campos."
+    );
     RemovePopUpOfConsole(popup);
     return;
-  }
-  else if (!nameRegex.test(nameValue) || !hasMultipleWords) {
-    let popup = CreateElement('div', 'popup-error', '❌ Nome inválido!<br>O nome deve começar com uma letra, ter no mínimo 2 palavras e conter apenas letras e espaços.');
+  } else if (!nameRegex.test(nameValue) || !hasMultipleWords) {
+    let popup = CreateElement(
+      "div",
+      "popup-error",
+      "❌ Nome inválido!<br>O nome deve começar com uma letra, ter no mínimo 2 palavras e conter apenas letras e espaços."
+    );
     RemovePopUpOfConsole(popup);
     return;
-  }
-  else if (!cpfRegex.test(cpfValue)) {
-    let popup = CreateElement('div', 'popup-error', '❌ CPF inválido!<br>O CPF deve estar no formato xxx.xxx.xxx-xx.');
+  } else if (!cpfRegex.test(cpfValue)) {
+    let popup = CreateElement(
+      "div",
+      "popup-error",
+      "❌ CPF inválido!<br>O CPF deve estar no formato xxx.xxx.xxx-xx."
+    );
     RemovePopUpOfConsole(popup);
     return;
-  }
-  else if (!emailRegex.test(emailValue)) {
-    let popup = CreateElement('div', 'popup-error', '❌ E-mail inválido.<br>Por favor, insira um endereço de e-mail no formato correto (ex: nome@dominio.com).');
+  } else if (!emailRegex.test(emailValue)) {
+    let popup = CreateElement(
+      "div",
+      "popup-error",
+      "❌ E-mail inválido.<br>Por favor, insira um endereço de e-mail no formato correto (ex: nome@dominio.com)."
+    );
     RemovePopUpOfConsole(popup);
     return;
-  }
-  else if (!userRegex.test(userValue)) {
-    let popup = CreateElement('div', 'popup-error', '❌ Usuário inválido!<br>O nome de usuário deve começar com uma letra e conter apenas letras e números.');
+  } else if (!userRegex.test(userValue)) {
+    let popup = CreateElement(
+      "div",
+      "popup-error",
+      "❌ Usuário inválido!<br>O nome de usuário deve começar com uma letra e conter apenas letras e números."
+    );
     RemovePopUpOfConsole(popup);
     return;
-  }
-  else if (passwordValue != passwordConfirmValue) {
-    let popup = CreateElement('div', 'popup-error', '❌ As senhas não coincidem!');
+  } else if (passwordValue != passwordConfirmValue) {
+    let popup = CreateElement(
+      "div",
+      "popup-error",
+      "❌ As senhas não coincidem!"
+    );
     RemovePopUpOfConsole(popup);
     return;
-  } 
-  else if (!passwordRegex.test(passwordValue)) {
-    let popup = CreateElement('div', 'popup-error', '❌ Sua senha é fraca! Ela deve conter mais de 8 caracteres, ao menos um especial, uma letra e um número.');
+  } else if (!passwordRegex.test(passwordValue)) {
+    let popup = CreateElement(
+      "div",
+      "popup-error",
+      "❌ Sua senha é fraca! Ela deve conter mais de 8 caracteres, ao menos um especial, uma letra e um número."
+    );
     RemovePopUpOfConsole(popup);
     return;
-  } 
-  else {
-    let popup = CreateElement('div', 'popup-sucess', '✅ Cadastro realizado com sucesso!<br>Você será redirecionado para a página de login.');
+  } else {
+    let popup = CreateElement(
+      "div",
+      "popup-sucess",
+      "✅ Cadastro realizado com sucesso!<br>Você será redirecionado para a página de login."
+    );
     RemovePopUpOfConsole(popup);
 
     // Outras validações
@@ -227,39 +253,57 @@ function CreateElement(element, className, content) {
   }
 }
 
-function RemovePopUpOfConsole(popup)
-{
-    popup.addEventListener("animationend", (event) => {
-        if (event.animationName === "fadeOut") {
-            popup.remove();
-        }
-    });
+function RemovePopUpOfConsole(popup) {
+  popup.addEventListener("animationend", (event) => {
+    if (event.animationName === "fadeOut") {
+      popup.remove();
+    }
+  });
 }
 
-document.addEventListener('copy', (event) => {
-    const selection = window.getSelection();
-    const selectedText = selection.toString();
+document.addEventListener("copy", (event) => {
+  const selection = window.getSelection();
+  const selectedText = selection.toString();
 
-    // Cria um elemento temporário para copiar o conteúdo com estilo
-    const tempElement = document.createElement('div');
-    tempElement.style.backgroundColor = 'transparent'; // Define o fundo como transparente
-    tempElement.style.color = 'inherit'; // Mantém a cor do texto
-    tempElement.textContent = selectedText;
+  // Cria um elemento temporário para copiar o conteúdo com estilo
+  const tempElement = document.createElement("div");
+  tempElement.style.backgroundColor = "transparent"; // Define o fundo como transparente
+  tempElement.style.color = "inherit"; // Mantém a cor do texto
+  tempElement.textContent = selectedText;
 
-    document.body.appendChild(tempElement);
+  document.body.appendChild(tempElement);
 
-    // Seleciona o conteúdo do elemento temporário
-    const range = document.createRange();
-    range.selectNodeContents(tempElement);
-    selection.removeAllRanges();
-    selection.addRange(range);
+  // Seleciona o conteúdo do elemento temporário
+  const range = document.createRange();
+  range.selectNodeContents(tempElement);
+  selection.removeAllRanges();
+  selection.addRange(range);
 
-    // Executa o comando de cópia
-    document.execCommand('copy');
+  // Executa o comando de cópia
+  document.execCommand("copy");
 
-    // Remove o elemento temporário
-    document.body.removeChild(tempElement);
+  // Remove o elemento temporário
+  document.body.removeChild(tempElement);
 
-    // Impede o comportamento padrão
-    event.preventDefault();
+  // Impede o comportamento padrão
+  event.preventDefault();
+});
+
+cpf.addEventListener("input", () => {
+  let value = cpf.value.replace(/\D/g, '');
+
+  if (value.length > 11) {
+    value = value.slice(0, 11);
+  }
+
+  if (value.length > 9) {
+    cpf.value = `${value.slice(0, 3)}.${value.slice(3, 6)}.${value.slice(6, 9
+    )}-${value.slice(9)}`;
+  } else if (value.length > 6) {
+    cpf.value = `${value.slice(0, 3)}.${value.slice(3, 6)}.${value.slice(6)}`;
+  } else if (value.length > 3) {
+    cpf.value = `${value.slice(0, 3)}.${value.slice(3)}`;
+  } else {
+    cpf.value = value;
+  }
 });
